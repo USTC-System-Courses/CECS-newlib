@@ -42,6 +42,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
+extern clock_t _times(void *buf);
 
 clock_t
 _times_r (struct _reent *ptr,

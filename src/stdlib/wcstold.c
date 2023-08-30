@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include <locale.h>
 #include "local.h"
 #include "../locale/setlocale.h"
-
+extern long double strtold_l (const char *__restrict, char **__restrict, locale_t);
 long double
 wcstold_l (const wchar_t *__restrict nptr, wchar_t **__restrict endptr,
 	   locale_t loc)

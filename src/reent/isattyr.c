@@ -40,7 +40,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+extern int	_isatty (int __fildes);
 int
 _isatty_r (ptr, fd)
      struct _reent *ptr;

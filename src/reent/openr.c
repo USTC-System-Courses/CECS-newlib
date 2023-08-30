@@ -37,7 +37,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+extern int _open(const char *path, int flags, mode_t mode);
 int
 _open_r (struct _reent *ptr,
      const char *file,

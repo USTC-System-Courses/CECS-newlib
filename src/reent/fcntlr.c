@@ -38,7 +38,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+extern int _fcntl (int, int, ...);
 int
 _fcntl_r (struct _reent *ptr,
      int fd,

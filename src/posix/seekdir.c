@@ -45,6 +45,7 @@ static char sccsid[] = "@(#)seekdir.c	5.7 (Berkeley) 6/1/90";
  * Seek to an entry in a directory.
  * _seekdir is in telldir.c so that it can share opaque data structures.
  */
+extern void	 _seekdir(DIR *, long);
 void
 seekdir (DIR *dirp,
 	long loc)

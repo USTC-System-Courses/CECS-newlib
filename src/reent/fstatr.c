@@ -42,7 +42,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+extern int _fstat(int fd, struct stat *buf);
 int
 _fstat_r (ptr, fd, pstat)
      struct _reent *ptr;

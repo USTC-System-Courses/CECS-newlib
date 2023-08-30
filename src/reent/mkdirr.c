@@ -38,7 +38,7 @@ DESCRIPTION
 */
 
 #include <sys/stat.h>
-
+extern int	_mkdir (const char *_path, mode_t __mode );
 int
 _mkdir_r (struct _reent *ptr,
      const char *path,

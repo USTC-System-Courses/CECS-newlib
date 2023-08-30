@@ -41,7 +41,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+extern int _link(const char *d, const char *n);
 int
 _link_r (struct _reent *ptr,
      const char *old,

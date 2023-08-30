@@ -40,7 +40,7 @@ static char sccsid[] = "@(#)rewinddir.c	5.1 (Berkeley) 5/25/90";
 #include <sys/types.h>
 #include <dirent.h>
 #include <sys/lock.h>
-
+extern void	 _seekdir(DIR *, long);
 void
 rewinddir (DIR *dirp)
 {

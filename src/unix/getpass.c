@@ -46,7 +46,11 @@ static char sccsid[] = "@(#)getpass.c	5.9 (Berkeley) 5/6/91";
 #ifndef _PASSWORD_LEN
 #define _PASSWORD_LEN           128     /* max length, not counting NULL */
 #endif
-
+extern int sigblock (int SignalMask);
+extern int sigmask (int Signal);
+extern int sigsetmask (int SignalMask);
+extern int tcgetattr(int __fd, struct termios *__termios_p);
+extern int tcsetattr(int __fd, int __optional_actions, const struct termios *__termios_p);
 char *
 getpass (prompt)
      const char *prompt;

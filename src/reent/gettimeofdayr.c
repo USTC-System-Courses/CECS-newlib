@@ -50,7 +50,7 @@ DESCRIPTION
 	This function is only available for a few targets.
 	Check libc.a to see if its available on yours.
 */
-
+extern int _gettimeofday(struct timeval *tv, struct timezone *tz);
 int
 _gettimeofday_r (struct _reent *ptr,
      struct timeval *ptimeval,

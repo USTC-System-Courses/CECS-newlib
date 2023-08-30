@@ -41,7 +41,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+extern int _kill (pid_t, int);
 int
 _kill_r (struct _reent *ptr,
      int pid,
@@ -75,6 +75,7 @@ DESCRIPTION
 	We never need <<errno>>, of course, but for consistency we
 	still must have the reentrant pointer argument.
 */
+extern pid_t  _getpid (void);
 
 int
 _getpid_r (struct _reent *ptr)

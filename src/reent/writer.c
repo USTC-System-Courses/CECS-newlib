@@ -36,7 +36,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+extern int _write(int fd, void *buf, size_t count);
 _ssize_t
 _write_r (struct _reent *ptr,
      int fd,
@@ -46,7 +46,7 @@ _write_r (struct _reent *ptr,
   _ssize_t ret;
 
   errno = 0;
-  if ((ret = (_ssize_t)_write (fd, buf, cnt)) == -1 && errno != 0)
+  if ((ret = (_ssize_t)_write (fd, (void*)buf, cnt)) == -1 && errno != 0)
     ptr->_errno = errno;
   return ret;
 }

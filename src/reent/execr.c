@@ -43,7 +43,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+extern int _execve(const char *fname, char * const argv[], char *const envp[]);
 int
 _execve_r (struct _reent *ptr,
      const char *name,
@@ -79,6 +79,7 @@ DESCRIPTION
 
 #ifndef NO_FORK
 
+extern pid_t _fork();
 int
 _fork_r (struct _reent *ptr)
 {

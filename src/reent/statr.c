@@ -43,7 +43,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+extern int _stat(const char *fname, struct stat *buf);
 int
 _stat_r (struct _reent *ptr,
      const char *file,

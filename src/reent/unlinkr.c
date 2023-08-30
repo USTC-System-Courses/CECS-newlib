@@ -37,6 +37,7 @@ DESCRIPTION
 	<<errno>>.
 */
 
+extern int _unlink(const char *n);
 int
 _unlink_r (struct _reent *ptr,
      const char *file)

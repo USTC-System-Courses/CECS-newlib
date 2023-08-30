@@ -43,7 +43,8 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+struct stat64;
+extern int	_stat64 (const char *__restrict __path, struct stat64 *__restrict __sbuf );
 int
 _stat64_r (struct _reent *ptr,
      const char *file,

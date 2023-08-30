@@ -145,7 +145,15 @@ typedef struct __posix_spawn_file_actions_entry {
 /*
  * Spawn routines
  */
-
+extern int sched_setscheduler(
+  pid_t                     __pid,
+  int                       __policy,
+  const struct sched_param *__param
+);
+extern int sched_setparam(
+  pid_t                     __pid,
+  const struct sched_param *__param
+);
 static int
 process_spawnattr(const posix_spawnattr_t sa)
 {
@@ -197,7 +205,8 @@ process_spawnattr(const posix_spawnattr_t sa)
 
 	return (0);
 }
-
+extern int _open(const char *path, int flags, mode_t mode);
+extern int _close(int fd);
 static int
 process_file_actions_entry(posix_spawn_file_actions_entry_t *fae)
 {
@@ -253,7 +262,7 @@ process_file_actions(const posix_spawn_file_actions_t fa)
 	}
 	return (0);
 }
-
+extern int     execvpe (const char *__file, char * const __argv[], char * const __envp[]);
 static int
 do_posix_spawn(pid_t *pid, const char *path,
 	const posix_spawn_file_actions_t *fa,

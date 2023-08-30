@@ -36,7 +36,7 @@ DESCRIPTION
 	takes a pointer to the global data block, which holds
 	<<errno>>.
 */
-
+extern off_t _lseek(int fd, off_t offset, int whence);
 _off_t
 _lseek_r (struct _reent *ptr,
      int fd,
